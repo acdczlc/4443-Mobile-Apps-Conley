@@ -1,14 +1,16 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+      <ion-title style="background-color: #26DD5E">
+          Location Tracker
+      </ion-title>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+ 
+<ion-content>
+    <h3>Current Latitude: {{locationTracker.lat}}</h3>
+    <h3>Current Longitude: {{locationTracker.lng}}</h3>
+    <button ion-button primary (click)="start()">Start Tracking</button>
+    <button ion-button primary (click)="stop()">Stop Tracking</button>
+    <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>    
+  <div #map id="map"></div> 
 </ion-content>
