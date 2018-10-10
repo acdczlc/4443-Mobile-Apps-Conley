@@ -22,9 +22,9 @@ export class HomePage {
   ionViewDidLoad(){
     this.loadMap();
   }
- 
+  
    loadMap(){
- 
+ //loads the map around current position
     this.geolocation.getCurrentPosition().then((position) => {
  
       let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
@@ -53,7 +53,7 @@ export class HomePage {
   }
 
   addMarker(){
- 
+ //adds marker at current position and center the map
     let marker = new google.maps.Marker({
       map: this.map,
       animation: google.maps.Animation.DROP,

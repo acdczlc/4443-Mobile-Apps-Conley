@@ -18,6 +18,8 @@ export class DataProvider {
   constructor(private firestore: AngularFirestore) {
     console.log('Hello DataProvider Provider');
   }
+  
+  //adding a document in firebase or send error that is logged
   async sendLocation(x: Geoposition) {
     var Ref = this.firestore.collection<any>('locations');
     console.log("inside sendlocation");

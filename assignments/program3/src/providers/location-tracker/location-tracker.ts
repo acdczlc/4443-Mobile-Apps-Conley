@@ -19,7 +19,7 @@ export class LocationTracker {
   startTracking() {
 
     // Foreground Tracking
-   
+   //options for how often watch checks the positions 
   let options = {
     frequency: 200,
     enableHighAccuracy: true
@@ -60,7 +60,7 @@ export class LocationTracker {
   }
  
   stopTracking() {
- 
+ //unsubscribes from watch to stop tracking and resets lat and lng
     console.log('stopTracking');
     this.zone.run(() => {
       this.lat = 0;
