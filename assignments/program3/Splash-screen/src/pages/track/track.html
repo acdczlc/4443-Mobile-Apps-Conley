@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title >
+          Location Tracker
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+    <h3>Current Latitude: {{locationTracker.lat}}</h3>
+    <h3>Current Longitude: {{locationTracker.lng}}</h3>
+    <button ion-button primary (click)="start()">Start Tracking</button>
+    <button ion-button primary (click)="stop()">Stop Tracking</button>
+    <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>  
+    <!-- <button ion-button (click)="Logout()"><ion-icon name="add"></ion-icon>Logout</button>    
+    -->
+  <div #map id="map"></div> 
+</ion-content>
